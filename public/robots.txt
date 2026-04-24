@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: *.json$
+Disallow: *.map$
+
+# Host preferencial
+Host: https://concettomoveisplanejados.com.br
+
+Sitemap: https://concettomoveisplanejados.com.br/sitemap.xml

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://concettomoveisplanejados.com.br</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://concettomoveisplanejados.com.br/logo.png</image:loc>
+      <image:title>Concetto Móveis Planejados - Logo</image:title>
+      <image:caption>Móveis planejados em Registro SP e região</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://concettomoveisplanejados.com.br/favicon.png</image:loc>
+      <image:title>Concetto Favicon</image:title>
+    </image:image>
+  </url>
+</urlset>

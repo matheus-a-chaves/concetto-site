@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --background: 42 12% 95%;
+  --foreground: 20 20% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 20% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 20% 12%;
+  --primary: 31 61% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 30 10% 92%;
+  --secondary-foreground: 20 20% 12%;
+  --muted: 30 10% 92%;
+  --muted-foreground: 24 14% 46%;
+  --accent: 30 10% 92%;
+  --accent-foreground: 20 20% 12%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 30 10% 84%;
+  --input: 30 10% 84%;
+  --ring: 31 61% 55%;
+  --radius: 1rem;
+  --gold: 31 61% 55%;
+  --wood-dark: 20 22% 16%;
+  --wood-medium: 25 22% 34%;
+  --cream: 42 12% 95%;
+  --card-hover: 30 10% 90%;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 20 20% 12%;
+  --sidebar-primary: 31 61% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 30 10% 92%;
+  --sidebar-accent-foreground: 20 20% 12%;
+  --sidebar-border: 30 10% 84%;
+  --sidebar-ring: 31 61% 55%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-weight: 700;
+}
+
+body,
+a,
+button {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
