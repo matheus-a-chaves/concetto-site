@@ -47,44 +47,39 @@ const galleryItems: GalleryItem[] = Object.entries(projectImages)
   })
   .filter((item): item is GalleryItem => item !== null);
 
-// Mapeamento de imagem padrão para cada projeto (índice base 0)
 const defaultImageIndex: Record<string, number> = {
-  "Casa AC": 2, // Imagem 3 (índice 2)
-  "Casa AE": 1, // Imagem 2 (índice 1)
-  "Casa BD": 0, // Imagem 1 (índice 0)
-  "Casa JG": 4, // Imagem 5 (índice 4)
-  "Casa MC": 31, // Imagem 32 (índice 31)
-  "Clinica PD": 10, // Imagem 11 (índice 10)
-  "Distribuidora Eyros": 6, // Imagem 7 (índice 6)
-  "Easy Soft": 0, // Imagem 1 (índice 0)
-  "Escritório AC": 0, // Imagem 1 (índice 0)
-  Prolab: 6, // Imagem 7 (índice 6)
-  Remax: 2, // Imagem 3 (índice 2)
+  "Casa AC": 2, 
+  "Casa AE": 1, 
+  "Casa BD": 0, 
+  "Casa JG": 4, 
+  "Casa MC": 31,
+  "Casa DF": 1,
+  "Casa MJ": 2,
+  "Clinica PD": 10, 
+  "Distribuidora Eyros": 6, 
+  "Easy Soft": 0,
+  "Escritório AC": 0,
+  "Prolab": 6, 
+  "Remax": 2, 
+  "Angelus": 3,
 };
 
 // Descrições personalizadas para cada projeto
 const projectDescriptions: Record<string, string> = {
-  "Casa AC":
-    "Projeto residencial completo com cozinha planejada, dormitórios e áreas de convivência.",
-  "Casa AE":
-    "Ambientes integrados com móveis sob medida e design contemporâneo.",
-  "Casa BD":
-    "Projeto residencial com acabamentos premium e soluções inteligentes de armazenamento.",
-  "Casa JG":
-    "Residência com móveis planejados em todos os ambientes, priorizando funcionalidade e estilo.",
-  "Casa MC":
-    "Projeto completo de marcenaria residencial com detalhes exclusivos.",
-  "Clinica PD":
-    "Ambiente corporativo clínico com móveis planejados para recepção e consultórios.",
-  "Distribuidora Eyros":
-    "Espaço comercial com balcões, prateleiras e móveis corporativos sob medida.",
+  "Casa AC": "Projeto residencial completo com cozinha planejada, dormitórios e áreas de convivência.",
+  "Casa AE": "Ambientes integrados com móveis sob medida e design contemporâneo.",
+  "Casa BD": "Projeto residencial com acabamentos premium e soluções inteligentes de armazenamento.",
+  "Casa JG": "Residência com móveis planejados em todos os ambientes, priorizando funcionalidade e estilo.",
+  "Casa MC": "Projeto completo de marcenaria residencial com detalhes exclusivos.",
+  "Casa DF": "Residência com móveis planejados para otimização de espaço e conforto.",
+  "Casa MJ": "Projeto residencial com móveis sob medida e design moderno.",
+  "Clinica PD": "Ambiente corporativo clínico com móveis planejados para recepção e consultórios.",
+  "Distribuidora Eyros": "Espaço comercial com balcões, prateleiras e móveis corporativos sob medida.",
   "Easy Soft": "Projeto corporativo com móveis funcionais e design moderno.",
-  "Escritório AC":
-    "Home office planejado com móveis ergonômicos e otimização de espaço.",
-  Prolab:
-    "Recepção corporativa elegante com móveis planejados e acabamento sofisticado.",
-  Remax:
-    "Ambiente corporativo da Remax com móveis sob medida e identidade visual.",
+  "Escritório AC": "Home office planejado com móveis ergonômicos e otimização de espaço.",
+  "Prolab": "Recepção corporativa elegante com móveis planejados e acabamento sofisticado.",
+  "Remax": "Ambiente corporativo da Remax com móveis sob medida e identidade visual.",
+  "Angelus": "Projeto comercial com móveis planejados para áreas de atendimento.",
 };
 
 // Criar lista de projetos únicos dinamicamente
@@ -102,7 +97,7 @@ const projectOptions: ProjectOption[] = projectNames.map((name) => ({
 
 function GallerySection() {
   const [selectedProject, setSelectedProject] = useState(
-    projectOptions[0]?.key || "",
+    projectOptions[1]?.key || "",
   );
   const [modalProject, setModalProject] = useState<string | null>(null);
   const [modalIndex, setModalIndex] = useState<number | null>(null);
@@ -116,7 +111,7 @@ function GallerySection() {
         return {
           ...project,
           items,
-          thumbnail: items[0]?.image, // Primeira imagem como thumbnail
+          thumbnail: items[0]?.image, 
         };
       }),
     [],
